@@ -1,14 +1,14 @@
-# Usa una imagen base con Rust
-FROM rust:latest
+# Usa la imagen oficial de GCC (compilador de C)
+FROM gcc:latest
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copiar el código fuente dentro del contenedor
-COPY rust.rs .
+COPY c.c .
 
-# Compilar el código
-RUN rustc rust.rs -o rust_program
+# Compilar el código con optimización O2
+RUN gcc -o fibonacci c.c -O2
 
 # Definir el comando que ejecutará el programa
-CMD ["./rust_program"]
+CMD ["./fibonacci"]
