@@ -1,0 +1,14 @@
+# Usa la imagen oficial de GCC (compilador de C)
+FROM gcc:latest
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el código fuente dentro del contenedor
+COPY c.c .
+
+# Compilar el código con optimización O2
+RUN gcc -o fibonacci c.c -O2
+
+# Definir el comando que ejecutará el programa
+CMD ["./fibonacci"]

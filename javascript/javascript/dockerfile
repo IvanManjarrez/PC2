@@ -1,0 +1,11 @@
+# Usa una imagen base con Node.js
+FROM node:latest
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el código fuente dentro del contenedor
+COPY javascript.js .
+
+# Definir el comando que ejecutará el programa
+CMD ["node", "javascript.js"]

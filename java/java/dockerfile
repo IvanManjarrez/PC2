@@ -1,0 +1,14 @@
+# Usa una imagen base con Java
+FROM openjdk:latest
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el código fuente dentro del contenedor
+COPY java.java .
+
+# Compilar el código
+RUN javac java.java
+
+# Definir el comando que ejecutará el programa
+CMD ["java", "FibonacciRecursivo"]

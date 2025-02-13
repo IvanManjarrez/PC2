@@ -1,0 +1,11 @@
+# Usa una imagen base con Python
+FROM python:latest
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el código fuente dentro del contenedor
+COPY python.py .
+
+# Definir el comando que ejecutará el programa
+CMD ["python", "python.py"]
