@@ -5,7 +5,7 @@ FROM node:latest
 WORKDIR /app
 
 # Copiar el código fuente dentro del contenedor
-COPY javascript.js .
+COPY . /app
 
 # Definir el comando que ejecutará el programa
 CMD ["node", "javascript.js"]
