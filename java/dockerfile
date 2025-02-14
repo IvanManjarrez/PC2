@@ -5,10 +5,10 @@ FROM openjdk:latest
 WORKDIR /app
 
 # Copiar el código fuente dentro del contenedor
-COPY FibonacciRecursivo.java .
+COPY java.java .
 
 # Compilar el código
 RUN javac java.java
 
 # Definir el comando que ejecutará el programa
-CMD ["java", "FibonacciRecursivo"]
+CMD ["java", "java"]
