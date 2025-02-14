@@ -5,7 +5,7 @@ FROM rust:latest
 WORKDIR /app
 
 # Copiar el código fuente dentro del contenedor
-COPY . /app
+COPY PC2/rust/rust.rs .
 
 # Compilar el código
 RUN rustc rust.rs -o rust_program
