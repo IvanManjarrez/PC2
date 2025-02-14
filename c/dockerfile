@@ -5,7 +5,7 @@ FROM gcc:latest
 WORKDIR /app
 
 # Copiar el código fuente dentro del contenedor
-COPY . /app
+COPY PC2/c/c.c .
 
 # Compilar el código con optimización O2
 RUN gcc -o fibonacci c.c -O2
