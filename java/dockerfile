@@ -5,7 +5,7 @@ FROM openjdk:latest
 WORKDIR /app
 
 # Copiar el código fuente dentro del contenedor
-COPY . /app
+COPY PC2/java/java.java .
 
 # Compilar el código
 RUN javac java.java
